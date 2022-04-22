@@ -1,4 +1,4 @@
-apiVersion: route.openshift.io/vi
+apiVersion: route.openshift.io/v1
 kind: Route
 id: sso-https
 metadata:
