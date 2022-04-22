@@ -1,14 +1,17 @@
 apiVersion: route.openshift.io/v1
 kind: Route
-id: sso-https
 metadata:
   name: sso
   labels:
     application: sso
-  annotaions:
+  annotations:
     description: "Route for application's https service."
 spec:
   to:
+    kind: Service
     name: sso
+    weight: 100
+  port:
+    targetPort: 8443
   tls:
     termination: reencrypt
