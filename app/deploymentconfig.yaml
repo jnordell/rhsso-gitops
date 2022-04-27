@@ -90,15 +90,15 @@ spec:
       - mountPath: /var/run/configmaps/service-ca
         name: service-ca
         readOnly: true
-      terminationGracePeriodSeconds: 75
-      volumes:
-      - name: sso-x509-https-volume
-        secret:
-          secretName: sso-x509-https-secret
-      - name: sso-x509-jgroups-volume
-        secret:
-          secretName: sso-x509-jgroups-secret
-      - configMap:
-          name: sso-service-ca
-        name: service-ca
+    terminationGracePeriodSeconds: 75
+    volumes:
+    - name: sso-x509-https-volume
+      secret:
+        secretName: sso-x509-https-secret
+    - name: sso-x509-jgroups-volume
+      secret:
+        secretName: sso-x509-jgroups-secret
+    - name: service-ca
+        configMap:
+          name: service-ca
   triggers:
