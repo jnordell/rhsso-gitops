@@ -101,14 +101,4 @@ spec:
       - configMap:
           name: sso-service-ca
         name: service-ca
-      triggers:
-      - imageChangeParams:
-        automatic: true
-        containerNames:
-        - sso
-        from:
-          kind: ImageStreamTag
-          name: sso75-openshift-rhel8:7.5
-          namespace: openshift
-        type: ImageChange
-      - type: ConfigChange
+  triggers:
