@@ -3,5 +3,6 @@ resources:
   - service-ping.yaml
   - route.yaml
   - sso-cm.yaml
+  - deploymentconfig.yaml
 
 namespace: rhsso
